@@ -1,18 +1,38 @@
+# ACCESO-A-DATOS 📁
 
-- **BibliotecaFicheros** — helper classes / modules related to file input/output, serialization, etc.  
-- **Ejercicio1** — core exercise(s) demonstrating foundational data access.  
-- **Tarea_Ampliacion** — bonus tasks, challenges, or expansions beyond the baseline exercises.
+This repository contains exercises and tasks focused on **data access** in Java — mostly dealing with file operations, serialization, and managing persistent data.  
+It’s part of a course on *Acceso a Datos*, exploring how programs read, write, and manipulate files and data formats.
 
 ---
 
-## ⚙️ Prerequisites & Setup
+## 📂 Repo Structure & Contents
 
-You’ll need:
+The repository includes these main components:
 
-- Java (or your chosen language / runtime) installed  
-- (Optional) Build tool / IDE: e.g. Maven, Gradle, IntelliJ, Eclipse, VS Code, etc.  
-- Clone this repository:
+- **BibliotecaFicheros/** — a library of file utilities: classes to abstract file I/O, serialization/deserialization, and helper methods.  
+- **Ejercicio1/** — the first exercise, likely dealing with basic file reading/writing (text, binary), demonstrating foundational operations.  
+- **Tarea_Ampliacion/** — extension tasks that build on the basic exercises with more complexity (e.g. error handling, multiple formats, enhancements).
 
-```bash
-git clone https://github.com/elisu1900/ACCESO-A-DATOS.git
-cd ACCESO-A-DATOS
+At present, the repo has **no description, website or topics** in its GitHub metadata. :contentReference[oaicite:0]{index=0}
+
+---
+
+## 🎓 Learning Goals
+
+Working through this repository should help you:
+
+- Understand Java I/O mechanisms: streams, readers/writers, buffering  
+- Implement serialization / deserialization of objects (binary / text)  
+- Handle errors, edge cases, resource closing, and file integrity  
+- Expand simple tasks into more robust, extensible solutions  
+- Gain practice in designing file-based data access abstractions
+
+---
+
+## 🚀 How to Use / Run
+
+1. **Clone** the repository:
+
+   ```bash
+   git clone https://github.com/elisu1900/ACCESO-A-DATOS.git
+   cd ACCESO-A-DATOS
