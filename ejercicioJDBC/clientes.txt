@@ -1,0 +1,91 @@
+Cliente 1, empresa: Alfreds Futterkiste, Teléfono: Maria Anders
+Cliente 2, empresa: Ana Trujillo Emparedados y helados, Teléfono: Ana Trujillo
+Cliente 3, empresa: Antonio Moreno Taquería, Teléfono: Antonio Moreno
+Cliente 4, empresa: Around the Horn, Teléfono: Thomas Hardy
+Cliente 5, empresa: Berglunds snabbköp, Teléfono: Christina Berglund
+Cliente 6, empresa: Blauer See Delikatessen, Teléfono: Hanna Moos
+Cliente 7, empresa: Blondel père et fils, Teléfono: Frédérique Citeaux
+Cliente 8, empresa: Bólido Comidas preparadas, Teléfono: Martín Sommer
+Cliente 9, empresa: Bon app', Teléfono: Laurence Lebihan
+Cliente 10, empresa: Bottom-Dollar Markets, Teléfono: Elizabeth Lincoln
+Cliente 11, empresa: B's Beverages, Teléfono: Victoria Ashworth
+Cliente 12, empresa: Cactus Comidas para llevar, Teléfono: Patricio Simpson
+Cliente 13, empresa: Centro comercial Moctezuma, Teléfono: Francisco Chang
+Cliente 14, empresa: Comércio Mineiro, Teléfono: Pedro Afonso
+Cliente 15, empresa: Consolidated Holdings, Teléfono: Elizabeth Brown
+Cliente 16, empresa: Chop-suey Chinese, Teléfono: Yang Wang
+Cliente 17, empresa: Drachenblut Delikatessen, Teléfono: Sven Ottlieb
+Cliente 18, empresa: Du monde entier, Teléfono: Janine Labrune
+Cliente 19, empresa: Eastern Connection, Teléfono: Ann Devon
+Cliente 20, empresa: Ernst Handel, Teléfono: Roland Mendel
+Cliente 21, empresa: Familia Arquibaldo, Teléfono: Aria Cruz
+Cliente 22, empresa: FISSA Fabrica Inter. Salchichas S.A., Teléfono: Diego Roel
+Cliente 23, empresa: Folies gourmandes, Teléfono: Martine Rancé
+Cliente 24, empresa: Folk och fä HB, Teléfono: Maria Larsson
+Cliente 25, empresa: Frankenversand, Teléfono: Peter Franken
+Cliente 26, empresa: France restauration, Teléfono: Carine Schmitt
+Cliente 27, empresa: Franchi S.p.A., Teléfono: Paolo Accorti
+Cliente 28, empresa: Furia Bacalhau e Frutos do Mar, Teléfono: Lino Rodriguez 
+Cliente 29, empresa: Galería del gastrónomo, Teléfono: Eduardo Saavedra
+Cliente 30, empresa: Godos Cocina Típica, Teléfono: José Pedro Freyre
+Cliente 31, empresa: Gourmet Lanchonetes, Teléfono: André Fonseca
+Cliente 32, empresa: Great Lakes Food Market, Teléfono: Howard Snyder
+Cliente 33, empresa: GROSELLA-Restaurante, Teléfono: Manuel Pereira
+Cliente 34, empresa: Hanari Carnes, Teléfono: Mario Pontes
+Cliente 35, empresa: HILARIÓN-Abastos, Teléfono: Carlos Hernández
+Cliente 36, empresa: Hungry Coyote Import Store, Teléfono: Yoshi Latimer
+Cliente 37, empresa: Hungry Owl All-Night Grocers, Teléfono: Patricia McKenna
+Cliente 38, empresa: Island Trading, Teléfono: Helen Bennett
+Cliente 39, empresa: Königlich Essen, Teléfono: Philip Cramer
+Cliente 40, empresa: La corne d'abondance, Teléfono: Daniel Tonini
+Cliente 41, empresa: La maison d'Asie, Teléfono: Annette Roulet
+Cliente 42, empresa: Laughing Bacchus Wine Cellars, Teléfono: Yoshi Tannamuri
+Cliente 43, empresa: Lazy K Kountry Store, Teléfono: John Steel
+Cliente 44, empresa: Lehmanns Marktstand, Teléfono: Renate Messner
+Cliente 45, empresa: Let's Stop N Shop, Teléfono: Jaime Yorres
+Cliente 46, empresa: LILA-Supermercado, Teléfono: Carlos González
+Cliente 47, empresa: LINO-Delicateses, Teléfono: Felipe Izquierdo
+Cliente 48, empresa: Lonesome Pine Restaurant, Teléfono: Fran Wilson
+Cliente 49, empresa: Magazzini Alimentari Riuniti, Teléfono: Giovanni Rovelli
+Cliente 50, empresa: Maison Dewey, Teléfono: Catherine Dewey
+Cliente 51, empresa: Mère Paillarde, Teléfono: Jean Fresnière
+Cliente 52, empresa: Morgenstern Gesundkost, Teléfono: Alexander Feuer
+Cliente 53, empresa: North/South, Teléfono: Simon Crowther
+Cliente 54, empresa: Océano Atlántico Ltda., Teléfono: Yvonne Moncada
+Cliente 55, empresa: Old World Delicatessen, Teléfono: Rene Phillips
+Cliente 56, empresa: Ottilies Käseladen, Teléfono: Henriette Pfalzheim
+Cliente 57, empresa: Paris spécialités, Teléfono: Marie Bertrand
+Cliente 58, empresa: Pericles Comidas clásicas, Teléfono: Guillermo Fernández
+Cliente 59, empresa: Piccolo und mehr, Teléfono: Georg Pipps
+Cliente 60, empresa: Princesa Isabel Vinhos, Teléfono: Isabel de Castro
+Cliente 61, empresa: Que Delícia, Teléfono: Bernardo Batista
+Cliente 62, empresa: Queen Cozinha, Teléfono: Lúcia Carvalho
+Cliente 63, empresa: QUICK-Stop, Teléfono: Horst Kloss
+Cliente 64, empresa: Rancho grande, Teléfono: Sergio Gutiérrez
+Cliente 65, empresa: Rattlesnake Canyon Grocery, Teléfono: Paula Wilson
+Cliente 66, empresa: Reggiani Caseifici, Teléfono: Maurizio Moroni
+Cliente 67, empresa: Ricardo Adocicados, Teléfono: Janete Limeira
+Cliente 68, empresa: Richter Supermarkt, Teléfono: Michael Holz
+Cliente 69, empresa: Romero y tomillo, Teléfono: Alejandra Camino
+Cliente 70, empresa: Santé Gourmet, Teléfono: Jonas Bergulfsen
+Cliente 71, empresa: Save-a-lot Markets, Teléfono: Jose Pavarotti
+Cliente 72, empresa: Seven Seas Imports, Teléfono: Hari Kumar
+Cliente 73, empresa: Simons bistro, Teléfono: Jytte Petersen
+Cliente 74, empresa: Spécialités du monde, Teléfono: Dominique Perrier
+Cliente 75, empresa: Split Rail Beer & Ale, Teléfono: Art Braunschweiger
+Cliente 76, empresa: Suprêmes délices, Teléfono: Pascale Cartrain
+Cliente 77, empresa: The Big Cheese, Teléfono: Liz Nixon
+Cliente 78, empresa: The Cracker Box, Teléfono: Liu Wong
+Cliente 79, empresa: Toms Spezialitäten, Teléfono: Karin Josephs
+Cliente 80, empresa: Tortuga Restaurante, Teléfono: Miguel Angel Paolino
+Cliente 81, empresa: Tradição Hipermercados, Teléfono: Anabela Domingues
+Cliente 82, empresa: Trail's Head Gourmet Provisioners, Teléfono: Helvetius Nagy
+Cliente 83, empresa: Vaffeljernet, Teléfono: Palle Ibsen
+Cliente 84, empresa: Victuailles en stock, Teléfono: Mary Saveley
+Cliente 85, empresa: Vins et alcools Chevalier, Teléfono: Paul Henriot
+Cliente 86, empresa: Die Wandernde Kuh, Teléfono: Rita Müller
+Cliente 87, empresa: Wartian Herkku, Teléfono: Pirkko Koskitalo
+Cliente 88, empresa: Wellington Importadora, Teléfono: Paula Parente
+Cliente 89, empresa: White Clover Markets, Teléfono: Karl Jablonski
+Cliente 90, empresa: Wilman Kala, Teléfono: Matti Karttunen
+Cliente 91, empresa: Wolski  Zajazd, Teléfono: Zbyszek Piestrzeniewicz
