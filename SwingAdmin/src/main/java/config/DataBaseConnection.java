@@ -28,4 +28,20 @@ public class DataBaseConnection {
         
         return conexion;
     }
+    
+    /**
+     * METODO PARA CERRAR LA CONEXION
+     * @param conexion Connection a cerrar
+     */
+    public static void desconectar(Connection conexion) {
+        if (conexion != null) {
+            try {
+                conexion.close();
+                System.out.println("Conexion cerrada");
+            } catch (SQLException e) {
+                System.out.println("Error al cerrar la conexion");
+                e.printStackTrace();
+            }
+        }
+    }
 }
