@@ -1,52 +1,48 @@
 package model;
 
 public class Actor {
-    private int id;
-    private String firstName;
-    private String lastName;
-    
-    // Constructor vacío
-    public Actor() {
-    }
-    
-    // Constructor con parámetros
-    public Actor(int id, String firstName, String lastName) {
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-    }
+	private int id;
+	private String firstName;
+	private String lastName;
 
-    // Getters y Setters
-    public int getId() {
-        return id;
-    }
+	// Constructor vacío
+	public Actor() {
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	// Constructor con parámetros
+	public Actor(int id, String firstName, String lastName) {
+		this.id = id;
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
-    public String getFirstName() {
-        return firstName;
-    }
+	// Getters y Setters
+	public int getId() {
+		return id;
+	}
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    @Override
-    public String toString() {
-        return "Actor{" +
-                "id=" + id +
-                ", firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
-    }
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	@Override
+	public String toString() {
+		return "Actor{" + "id=" + id + ", firstName='" + firstName + '\'' + ", lastName='" + lastName + '\'' + '}';
+	}
 }

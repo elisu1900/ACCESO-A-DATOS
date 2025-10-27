@@ -12,10 +12,13 @@ import config.DataBaseConnection;
 import model.Actor;
 import model.Film;
 
-// EN EL VIEW FALTAN 2 CAMPOS MAS Y EN TODO LO QUE DESCIENDE DE ESTE
-
 public class FilmDAO {
-
+	/**
+	 * trae todas las peliculas, crea instancias de ellas y luego las añade a la
+	 * lista
+	 * 
+	 * @return
+	 */
 	public List<Film> getAllFilms() {
 		List<Film> films = new ArrayList<>();
 		Connection conn = null;
@@ -23,7 +26,7 @@ public class FilmDAO {
 		ResultSet rs = null;
 
 		try {
-			conn = DataBaseConnection.conectar();
+			conn = DataBaseConnection.connect();
 
 			String sql = "SELECT * FROM film";
 			ps = conn.prepareStatement(sql);
@@ -51,7 +54,7 @@ public class FilmDAO {
 				if (conn != null)
 					conn.close();
 				if (conn != null)
-					DataBaseConnection.desconectar(conn);
+					DataBaseConnection.desconnect(conn);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -60,7 +63,13 @@ public class FilmDAO {
 		return films;
 	}
 
-	public List<Actor> getActorFilm(int filmId) {
+	/**
+	 * devuelve una lista de actores que participan en esa pelicula
+	 * 
+	 * @param filmId
+	 * @return
+	 */
+	public List<Actor> getActorsByFilmId(int filmId) {
 		List<Actor> actors = new ArrayList<>();
 		Connection conn = null;
 		PreparedStatement ps = null;
@@ -68,13 +77,12 @@ public class FilmDAO {
 
 		try {
 
-			conn = DataBaseConnection.conectar();
+			conn = DataBaseConnection.connect();
 
 			String sql = "select actor.*, film_actor.film_id from actor "
-			           + "join film_actor on actor.actor_id = film_actor.actor_id "
-			           + "where film_actor.film_id = ?";
+					+ "join film_actor on actor.actor_id = film_actor.actor_id " + "where film_actor.film_id = ?";
 			ps = conn.prepareStatement(sql);
-			ps.setInt(1,filmId);
+			ps.setInt(1, filmId);
 
 			rs = ps.executeQuery();
 
@@ -97,8 +105,6 @@ public class FilmDAO {
 					ps.close();
 				if (conn != null)
 					conn.close();
-				if (conn != null)
-					DataBaseConnection.desconectar(conn);
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
@@ -107,4 +113,83 @@ public class FilmDAO {
 		return actors;
 
 	}
+
+	/**
+	 * Inserta una nueva pelicula en la base de datos
+	 * 
+	 * @param film
+	 * @return true si se ha insertado , false si falla
+	 */
+	public boolean insertFilm(Film film) {
+		Connection conn = null;
+		PreparedStatement ps = null;
+
+		try {
+			conn = DataBaseConnection.connect();
+
+			String sql = "INSERT INTO film (title, release_year, rental_rate) " + "VALUES (?, ?, ?)";
+
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, film.getTitle());
+			ps.setInt(2, film.getReleaseYear());
+			ps.setDouble(3, film.getRentalRate());
+
+			int rowsAffected = ps.executeUpdate();
+			return rowsAffected > 0;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				if (ps != null)
+					ps.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+
+		}
+	}
+
+	/**
+	 * Actualiza una pelicula existente en la base de datos
+	 * 
+	 * @param film
+	 * @return true si se actualizó, false si falla
+	 */
+	public boolean updateFilm(Film film) {
+		Connection conn = null;
+		PreparedStatement ps = null;
+
+		try {
+			conn = DataBaseConnection.connect();
+
+			String sql = "UPDATE film SET title = ?, release_year = ?, rental_rate = ? " + "WHERE film_id = ?";
+
+			ps = conn.prepareStatement(sql);
+			ps.setString(1, film.getTitle());
+			ps.setInt(2, film.getReleaseYear());
+			ps.setDouble(3, film.getRentalRate());
+			ps.setInt(4, film.getId());
+
+			int rowsAffected = ps.executeUpdate();
+			return rowsAffected > 0;
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return false;
+		} finally {
+			try {
+				if (ps != null)
+					ps.close();
+				if (conn != null)
+					conn.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+
 }

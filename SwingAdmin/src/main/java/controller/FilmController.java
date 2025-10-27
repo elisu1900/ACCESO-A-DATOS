@@ -17,7 +17,7 @@ public class FilmController {
 	private FilmDAO filmDao;
 	private List<Film> films;
 	private int index;
-
+	private boolean isNewMode = false;  
 	/**
 	 * constructor de la clase
 	 * 
@@ -36,6 +36,9 @@ public class FilmController {
 	private void initController() {
 		loadAllFilms();
 
+		addListeners();
+		
+		
 		if (films != null && !films.isEmpty()) {
 			displayFilm(films.get(0));
 		} else {
@@ -80,6 +83,19 @@ public class FilmController {
 				showLast();
 			}
 		});
+		
+		view.getBtnLimpiar().addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				clearFields();
+			}
+		});
+		view.getBtnCrear().addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                saveFilm();
+            }
+        });
 	}
 	/**
 	 * muestra el primer registro de pelicula
@@ -116,6 +132,21 @@ public class FilmController {
 		displayFilm(films.get(index));
 
 	}
+	/**
+	 * limpia los campos de la pantalla
+	 */
+	private void clearFields() {
+		view.getTxtId().setText("");
+		view.getTxtTitle().setText("");
+		view.getTxtRelease_year().setText("");
+		view.getTxtRating().setText("");
+		
+		
+	    view.getModel().setRowCount(0);
+
+	    view.getTxtId().setEditable(false);
+	}
+	
 /**
  * muestra las peliculas por pantalla
  * @param film
@@ -137,7 +168,7 @@ public class FilmController {
 	private void loadActors(int filmId) {
         view.getModel().setRowCount(0);
         
-        List<Actor> actors = filmDao.getActorFilm(filmId);
+        List<Actor> actors = filmDao.getActorsByFilmId(filmId);
         
         for (Actor actor : actors) {
             view.getModel().addRow(new Object[]{
@@ -147,5 +178,50 @@ public class FilmController {
             });
         }        
     }
+	
+	/**
+	 * Guarda la película actual (INSERT o UPDATE según el modo)
+	 */
+	private void saveFilm() {
+	    try {
+	        if (view.getTxtTitle().getText().trim().isEmpty()) {
+	            JOptionPane.showMessageDialog(view, "El título no puede estar vacío");
+	            return;
+	        }
+	        
+	        Film film = new Film();
+	        film.setTitle(view.getTxtTitle().getText().trim());
+	        film.setReleaseYear(Integer.parseInt(view.getTxtRelease_year().getText().trim()));
+	        film.setRentalRate(Double.parseDouble(view.getTxtRating().getText().trim()));
+	        
+	        boolean success = false;
+	        
+	        if (isNewMode) {
+	            success = filmDao.insertFilm(film);
+	            if (success) {
+	                JOptionPane.showMessageDialog(view, "Película creada correctamente");
+	                loadAllFilms();
+	                showLast();
+	                isNewMode = false;
+	            } else {
+	                JOptionPane.showMessageDialog(view, "Error al crear la película");
+	            }
+	            
+	        } else {
+	            film.setId(Integer.parseInt(view.getTxtId().getText()));
+	            success = filmDao.updateFilm(film);
+	            if (success) {
+	                JOptionPane.showMessageDialog(view, "Película actualizada correctamente");
+	                loadAllFilms();
+	                displayFilm(films.get(index));
+	            } else {
+	                JOptionPane.showMessageDialog(view, "Error al actualizar la película");
+	            }
+	        }
+	        
+	    } catch (NumberFormatException e) {
+	        JOptionPane.showMessageDialog(view, "Error en los datos numéricos");
+	    }
+	}
 
 }

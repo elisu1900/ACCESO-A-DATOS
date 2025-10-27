@@ -40,22 +40,6 @@ public class MainView extends JFrame {
 	private JScrollPane scrollPane;
 
 	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					MainView frame = new MainView();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
-
-	/**
 	 * Create the frame.
 	 */
 	public MainView() {
@@ -67,51 +51,52 @@ public class MainView extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(new BorderLayout(0, 0));
-		
+
 		JPanel panelHeader = new JPanel();
 		panelHeader.setBackground(new Color(128, 128, 255));
 		contentPane.add(panelHeader, BorderLayout.NORTH);
-		
+
 		JLabel lbltitle = new JLabel("FILM SEARCHER\r\n");
 		lbltitle.setFont(new Font("Tahoma", Font.PLAIN, 28));
 		panelHeader.add(lbltitle);
-		
+
 		JPanel panelMain = new JPanel();
 		panelMain.setBackground(new Color(255, 255, 255));
 		contentPane.add(panelMain, BorderLayout.CENTER);
 		panelMain.setLayout(new BorderLayout(0, 0));
-		
+
 		JPanel panelButtons = new JPanel();
 		panelButtons.setBackground(new Color(168, 218, 220));
 		panelMain.add(panelButtons, BorderLayout.NORTH);
 		panelButtons.setLayout(new GridLayout(1, 0, 30, 5));
-		
+
 		btnFirst = new JButton("FIRST\r\n");
 		btnFirst.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		panelButtons.add(btnFirst);
-		
+
 		btnBefore = new JButton("BEFORE\r\n");
 		btnBefore.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		panelButtons.add(btnBefore);
-		
+
 		btnAfter = new JButton("AFTER\r\n");
 		btnAfter.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		panelButtons.add(btnAfter);
-		
+
 		btnLast = new JButton("LAST\r\n");
 		btnLast.setFont(new Font("Tahoma", Font.PLAIN, 17));
 		panelButtons.add(btnLast);
-		
+
 		JPanel panelData = new JPanel();
 		panelData.setBackground(new Color(255, 214, 165));
 		panelMain.add(panelData, BorderLayout.CENTER);
 		GridBagLayout gbl_panelData = new GridBagLayout();
-		gbl_panelData.columnWidths = new int[]{0, 0, 0, 0, 0};
-		gbl_panelData.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-		gbl_panelData.columnWeights = new double[]{0.0, 1.0, 0.0, 1.0, Double.MIN_VALUE};
-		gbl_panelData.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, Double.MIN_VALUE};
+		gbl_panelData.columnWidths = new int[] { 0, 0, 0, 0, 0 };
+		gbl_panelData.rowHeights = new int[] { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+		gbl_panelData.columnWeights = new double[] { 0.0, 1.0, 0.0, 1.0, Double.MIN_VALUE };
+		gbl_panelData.rowWeights = new double[] { 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0,
+				Double.MIN_VALUE };
 		panelData.setLayout(gbl_panelData);
-		
+
 		JLabel lblId = new JLabel("ID\r\n");
 		lblId.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_lblId = new GridBagConstraints();
@@ -120,7 +105,7 @@ public class MainView extends JFrame {
 		gbc_lblId.gridx = 0;
 		gbc_lblId.gridy = 1;
 		panelData.add(lblId, gbc_lblId);
-		
+
 		txtId = new JTextField();
 		txtId.setFont(new Font("Dialog", Font.PLAIN, 16));
 		GridBagConstraints gbc_txtId = new GridBagConstraints();
@@ -130,7 +115,7 @@ public class MainView extends JFrame {
 		gbc_txtId.gridy = 1;
 		panelData.add(txtId, gbc_txtId);
 		txtId.setColumns(10);
-		
+
 		JLabel lblTitle = new JLabel("TITULO\r\n");
 		lblTitle.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_lblTitle = new GridBagConstraints();
@@ -139,7 +124,7 @@ public class MainView extends JFrame {
 		gbc_lblTitle.gridx = 0;
 		gbc_lblTitle.gridy = 2;
 		panelData.add(lblTitle, gbc_lblTitle);
-		
+
 		txtTitle = new JTextField();
 		txtTitle.setFont(new Font("Dialog", Font.PLAIN, 16));
 		GridBagConstraints gbc_txtTitle = new GridBagConstraints();
@@ -149,7 +134,7 @@ public class MainView extends JFrame {
 		gbc_txtTitle.gridy = 2;
 		panelData.add(txtTitle, gbc_txtTitle);
 		txtTitle.setColumns(10);
-		
+
 		JLabel lblRating = new JLabel("CLASIFICACION");
 		lblRating.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_lblRating = new GridBagConstraints();
@@ -158,7 +143,7 @@ public class MainView extends JFrame {
 		gbc_lblRating.gridx = 2;
 		gbc_lblRating.gridy = 2;
 		panelData.add(lblRating, gbc_lblRating);
-		
+
 		txtRating = new JTextField();
 		txtRating.setFont(new Font("Dialog", Font.PLAIN, 16));
 		GridBagConstraints gbc_txtRating = new GridBagConstraints();
@@ -168,7 +153,7 @@ public class MainView extends JFrame {
 		gbc_txtRating.gridy = 2;
 		panelData.add(txtRating, gbc_txtRating);
 		txtRating.setColumns(10);
-		
+
 		JLabel lblrelease_year = new JLabel("AÑO DE LANZAMIENTO");
 		lblrelease_year.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_lblrelease_year = new GridBagConstraints();
@@ -177,7 +162,7 @@ public class MainView extends JFrame {
 		gbc_lblrelease_year.gridx = 0;
 		gbc_lblrelease_year.gridy = 3;
 		panelData.add(lblrelease_year, gbc_lblrelease_year);
-		
+
 		txtRelease_year = new JTextField();
 		txtRelease_year.setFont(new Font("Dialog", Font.PLAIN, 16));
 		GridBagConstraints gbc_txtRelease_year = new GridBagConstraints();
@@ -187,7 +172,7 @@ public class MainView extends JFrame {
 		gbc_txtRelease_year.gridy = 3;
 		panelData.add(txtRelease_year, gbc_txtRelease_year);
 		txtRelease_year.setColumns(10);
-		
+
 		JPanel panelTable = new JPanel();
 		panelTable.setBackground(new Color(255, 180, 162));
 		GridBagConstraints gbc_panelTable = new GridBagConstraints();
@@ -198,9 +183,9 @@ public class MainView extends JFrame {
 		gbc_panelTable.gridy = 7;
 		panelData.add(panelTable, gbc_panelTable);
 		panelTable.setLayout(new BorderLayout(0, 0));
-		
+
 		// Crear la tabla PRIMERO
-		String[] columnNames = { "Id", "First Name", "Last Name"};
+		String[] columnNames = { "Id", "First Name", "Last Name" };
 		model = new DefaultTableModel(columnNames, 0) {
 			public boolean isCellEditable(int row, int column) {
 				return false;
@@ -208,16 +193,16 @@ public class MainView extends JFrame {
 		};
 		tblActors = new JTable(model);
 		tblActors.setRowHeight(25);
-		tblActors.getTableHeader().setBackground(Color.decode("#D4B5E8")); 
+		tblActors.getTableHeader().setBackground(Color.decode("#D4B5E8"));
 		tblActors.getTableHeader().setForeground(Color.WHITE);
-		
+
 		TableRowSorter<DefaultTableModel> sorter = new TableRowSorter<>(model);
 		tblActors.setRowSorter(sorter);
-		
+
 		// DESPUÉS añadirla al panel
 		scrollPane = new JScrollPane(tblActors);
 		panelTable.add(scrollPane, BorderLayout.CENTER);
-		
+
 		btnLimpiar = new JButton("LIMPIAR\r\n");
 		btnLimpiar.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_btnLimpiar = new GridBagConstraints();
@@ -225,7 +210,7 @@ public class MainView extends JFrame {
 		gbc_btnLimpiar.gridx = 0;
 		gbc_btnLimpiar.gridy = 11;
 		panelData.add(btnLimpiar, gbc_btnLimpiar);
-		
+
 		btnCrear = new JButton("CREAR");
 		btnCrear.setFont(new Font("Tahoma", Font.PLAIN, 16));
 		GridBagConstraints gbc_btnCrear = new GridBagConstraints();
@@ -233,41 +218,53 @@ public class MainView extends JFrame {
 		gbc_btnCrear.gridx = 1;
 		gbc_btnCrear.gridy = 11;
 		panelData.add(btnCrear, gbc_btnCrear);
-		
+
 	}
+
 	public JTextField getTxtId() {
 		return txtId;
 	}
+
 	public JTextField getTxtTitle() {
 		return txtTitle;
 	}
+
 	public JTextField getTxtRelease_year() {
 		return txtRelease_year;
 	}
+
 	public JTextField getTxtRating() {
 		return txtRating;
 	}
+
 	public JButton getBtnFirst() {
 		return btnFirst;
 	}
+
 	public JButton getBtnBefore() {
 		return btnBefore;
 	}
+
 	public JButton getBtnAfter() {
 		return btnAfter;
 	}
+
 	public JButton getBtnLast() {
 		return btnLast;
 	}
+
 	public JButton getBtnLimpiar() {
 		return btnLimpiar;
 	}
+
 	public JButton getBtnCrear() {
 		return btnCrear;
 	}
+
 	public JScrollPane getScrollPane() {
 		return scrollPane;
 	}
+
 	public DefaultTableModel getModel() {
 		return model;
 	}

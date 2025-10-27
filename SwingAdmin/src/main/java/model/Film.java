@@ -1,63 +1,59 @@
 package model;
 
 public class Film {
-    private int id;
-    private String title;
-    private int releaseYear;
-    private double rentalRate;
-    
-    // Constructor vacío
-    public Film() {
-    }
-    
-    // Constructor con parámetros
-    public Film(int id, String title, int releaseYear, double rentalRate) {
-        this.id = id;
-        this.title = title;
-        this.releaseYear = releaseYear;
-        this.rentalRate = rentalRate;
-    }
+	private int id;
+	private String title;
+	private int releaseYear;
+	private double rentalRate;
 
-    // Getters y Setters
-    public int getId() {
-        return id;
-    }
+	// Constructor vacío
+	public Film() {
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	// Constructor con parámetros
+	public Film(int id, String title, int releaseYear, double rentalRate) {
+		this.id = id;
+		this.title = title;
+		this.releaseYear = releaseYear;
+		this.rentalRate = rentalRate;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	// Getters y Setters
+	public int getId() {
+		return id;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public int getReleaseYear() {
-        return releaseYear;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public void setReleaseYear(int releaseYear) {
-        this.releaseYear = releaseYear;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public double getRentalRate() {
-        return rentalRate;
-    }
+	public int getReleaseYear() {
+		return releaseYear;
+	}
 
-    public void setRentalRate(double rentalRate) {
-        this.rentalRate = rentalRate;
-    }
+	public void setReleaseYear(int releaseYear) {
+		this.releaseYear = releaseYear;
+	}
 
-    @Override
-    public String toString() {
-        return "Film{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", releaseYear=" + releaseYear +
-                ", rentalRate=" + rentalRate +
-                '}';
-    }
+	public double getRentalRate() {
+		return rentalRate;
+	}
+
+	public void setRentalRate(double rentalRate) {
+		this.rentalRate = rentalRate;
+	}
+
+	@Override
+	public String toString() {
+		return "Film{" + "id=" + id + ", title='" + title + '\'' + ", releaseYear=" + releaseYear + ", rentalRate="
+				+ rentalRate + '}';
+	}
 }
