@@ -24,14 +24,12 @@ public class DataBaseConnection {
                 return null;
             }
 
-            // Cargar las propiedades desde el archivo
             prop.load(input);
 
             String url = prop.getProperty("db.url");
             String username = prop.getProperty("db.username");
             String password = prop.getProperty("db.password");
 
-            // Crear la conexión
             conexion = DriverManager.getConnection(url, username, password);
             System.out.println("Conexión OK");
 

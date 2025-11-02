@@ -118,7 +118,7 @@ public class FilmDAO {
 	 * Inserta una nueva pelicula en la base de datos
 	 * 
 	 * @param film
-	 * @return true si se ha insertado , false si falla
+	 * @return true si se ha insertado, false si falla
 	 */
 	public boolean insertFilm(Film film) {
 		Connection conn = null;
@@ -127,12 +127,16 @@ public class FilmDAO {
 		try {
 			conn = DataBaseConnection.connect();
 
-			String sql = "INSERT INTO film (title, release_year, rental_rate) " + "VALUES (?, ?, ?)";
+			String sql = "INSERT INTO film (title, release_year, language_id, rental_duration, rental_rate, replacement_cost) "
+					+ "VALUES (?, ?, ?, ?, ?, ?)";
 
 			ps = conn.prepareStatement(sql);
 			ps.setString(1, film.getTitle());
 			ps.setInt(2, film.getReleaseYear());
-			ps.setDouble(3, film.getRentalRate());
+			ps.setInt(3, 1);
+			ps.setInt(4, 3);
+			ps.setDouble(5, film.getRentalRate());
+			ps.setDouble(6, 19.99);
 
 			int rowsAffected = ps.executeUpdate();
 			return rowsAffected > 0;
@@ -149,7 +153,6 @@ public class FilmDAO {
 			} catch (SQLException e) {
 				e.printStackTrace();
 			}
-
 		}
 	}
 
