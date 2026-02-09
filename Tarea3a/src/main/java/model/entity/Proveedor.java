@@ -91,7 +91,6 @@ public class Proveedor implements Serializable {
         this.contacto = contacto;
     }
 
-    // CORRECCIÓN: Método renombrado a camelCase
     public String getCargoContacto() {
         return cargoContacto;
     }
