@@ -13,14 +13,13 @@ public class Main {
 
         Session session = HibernateUtil.getSession();
         session.beginTransaction();
-        List<Object[]> resultados = ConsultasHQL.primera(session);
+        List<Object[]> resultados = ConsultasHQL.novena(session);
         session.getTransaction().commit();
 
         for (Object[] fila : resultados) {
-            System.out.println(
-                    "Categoria: " + fila[0] +
-                            " | Producto: " + fila[1]
-            );
+            for (int i = 0; i < fila.length; i++) {
+                System.out.println(fila[i]);
+            }
         }
 
         session.close();
